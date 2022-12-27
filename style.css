@@ -14,15 +14,9 @@
 }
 
 .imgbanner {
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    height: 250px;
 }
-
-.astromate {
-    display: block;
-    margin: auto;
-    width: 300px; /* Tamaño de la imagen */
-  }
 
 a {
     color: white;
@@ -32,6 +26,7 @@ a {
 body {
     background-color: black;
     color: white;
+    font-size: larger;
 }
 
 main {
@@ -42,12 +37,13 @@ main {
 }
 
 .banner {
-position: fixed;
-display: block;
-background-color: black;
-width: 100%;
-top: 0;
+    position: fixed;
+    display: block;
+    background-color: black;
+    width: 100%;
+    top: 0;
 }
+
 h1 {
     text-align: center;
 }
@@ -61,7 +57,7 @@ article {
 }
 
 article:first-of-type {
-    margin-top: 140px;
+    margin-top: 100px;
 }
 
 nav {
@@ -182,10 +178,6 @@ button:hover {
         display: none;
     }
 
-    .title {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -231,10 +223,6 @@ button:hover {
         display: none;
     }
 
-    .title {
-        display: block;
-    }
-
 }
 
 .sticky-element {
@@ -248,18 +236,19 @@ button:hover {
 form {
     font-family: Arial, sans-serif;
     color: white;
-  }
+}
 
-  input[type="text"], textarea {
+input[type="text"],
+textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -268,20 +257,19 @@ form {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
     background-color: #45a049;
-  }
-  
-  input {
+}
+
+input {
     background-color: #666;
     color: white;
-  }
+}
 
-  #message {
+#message {
     max-width: 100%;
     background-color: #666;
     color: white;
-  }
-  
+}
