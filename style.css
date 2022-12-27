@@ -1,0 +1,220 @@
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #333;
+    /* El color de fondo de la barra de desplazamiento será gris oscuro */
+    color: #fff;
+    /* El color de las flechas de desplazamiento será blanco */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    /* El color de fondo de la parte deslizante será gris medio */
+    border-radius: 10px;
+    /* La parte deslizante tendrá bordes redondeados */
+}
+
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+main {
+    background-color: black;
+    color: darkslategray;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.banner {
+position: fixed;
+display: block;
+background-color: black;
+width: 100%;
+top: 0;
+}
+h1 {
+    text-align: center;
+}
+
+article {
+    border: 1px solid #333;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgb(7, 10, 24);
+    color: rgb(255, 255, 255);
+}
+
+article:first-of-type {
+    margin-top: 140px;
+}
+
+nav {
+    display: flex;
+    align-items: left;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+aside {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 1em;
+}
+
+aside a:hover {
+    background-color: #444;
+}
+
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul {
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+aside ul.open {
+    max-height: 1000px;
+}
+
+aside ul {
+    display: block;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #444;
+}
+
+@media screen and (min-width: 601px) {
+
+    main {
+        margin-right: 200px;
+    }
+
+    aside ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    aside ul {
+        transition: max-height 0.5s ease-in-out;
+        max-height: 1000px;
+        overflow: hidden;
+    }
+
+    aside ul.open {
+        max-height: 0;
+    }
+
+    aside ul {
+        display: block;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        width: 100%;
+    }
+
+    aside {
+        display: block;
+        color: white;
+        width: auto;
+        height: max-content;
+        z-index: 2;
+    }
+
+    aside ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    aside ul {
+        transition: max-height 0.5s ease-in-out;
+        max-height: 1000px;
+        overflow: hidden;
+    }
+
+    aside ul.open {
+        max-height: 0;
+    }
+
+    aside ul {
+        display: block;
+    }
+
+    button {
+        float: right;
+        z-index: 1;
+        top: 0;
+    }
+
+}
+
+.sticky-element {
+    position: -webkit-sticky;
+    /* Para Safari */
+    position: sticky;
+    top: 0;
+    /* El elemento se fijará en la parte superior del contenedor */
+}
