@@ -26,7 +26,18 @@
     </header>
     <main class="contenedor-principal">
         <article>
-            <h2>cosas</h2>
+            <form>
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="subject">Asunto:</label><br>
+                <input type="text" id="subject" name="subject"><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Enviar">
+              </form> 
+              
         </article>
     </main>
 
@@ -41,6 +52,33 @@
     <footer>
         <p>Copyright 2021</p>
     </footer>
+    <?php
+
+// Comprueba si el formulario ha sido enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Recoge los datos del formulario
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
+  // Configura el correo electrónico
+  $to = 'faderemiliano2@gmail.com';
+  $subject = 'Mensaje de contacto: ' . $subject;
+  $headers = 'De: ' . $email . "\r\n" .
+             'Responder a: ' . $email . "\r\n" .
+             'X-Mailer: PHP/' . phpversion();
+
+  // Envía el correo electrónico
+  mail($to, $subject, $message, $headers);
+
+  // Redirige al usuario a la página de gracias
+  header('Location: gracias.html');
+  exit;
+}
+
+?>
+
 </body>
 
 </html>
