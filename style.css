@@ -13,7 +13,21 @@
     /* La parte deslizante tendrá bordes redondeados */
 }
 
+.imgbanner {
+    display: flex;
+    justify-content: center;
+}
 
+.astromate {
+    display: block;
+    margin: auto;
+    width: 300px; /* Tamaño de la imagen */
+  }
+
+a {
+    color: white;
+    font-size: larger;
+}
 
 body {
     background-color: black;
@@ -168,6 +182,10 @@ button:hover {
         display: none;
     }
 
+    .title {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -207,6 +225,14 @@ button:hover {
         float: right;
         z-index: 1;
         top: 0;
+    }
+
+    .imgbanner {
+        display: none;
+    }
+
+    .title {
+        display: block;
     }
 
 }
