@@ -7,26 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Emiliano F WEB</title>
+    <title>Fader Developer</title>
 </head>
 
 <body>
 
     <header>
         <div class="banner">
-            <h1>FADER</h1>
-            <button class="sticky-element" id="menu-button">Menú</button>
-
             <nav>
                 <a href="index.html">Inicio</a>
                 <a href="acercade.html">Acerca de</a>
                 <a href="contacto.html">Contacto</a>
+                <button class="sticky-element" id="menu-button">Menú</button>
             </nav>
         </div>
     </header>
     <main class="contenedor-principal">
         <article>
-            <form>
+            <form action="https://formspree.io/f/mzbqpwjb" method="POST">
                 <label for="name">Nombre:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <label for="email">Email:</label><br>
@@ -36,8 +34,8 @@
                 <label for="message">Mensaje:</label><br>
                 <textarea id="message" name="message"></textarea><br>
                 <input type="submit" value="Enviar">
-              </form> 
-              
+            </form>
+
         </article>
     </main>
 
@@ -52,32 +50,6 @@
     <footer>
         <p>Copyright 2021</p>
     </footer>
-    <?php
-
-// Comprueba si el formulario ha sido enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Recoge los datos del formulario
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $subject = $_POST['subject'];
-  $message = $_POST['message'];
-
-  // Configura el correo electrónico
-  $to = 'faderemiliano2@gmail.com';
-  $subject = 'Mensaje de contacto: ' . $subject;
-  $headers = 'De: ' . $email . "\r\n" .
-             'Responder a: ' . $email . "\r\n" .
-             'X-Mailer: PHP/' . phpversion();
-
-  // Envía el correo electrónico
-  mail($to, $subject, $message, $headers);
-
-  // Redirige al usuario a la página de gracias
-  header('Location: gracias.html');
-  exit;
-}
-
-?>
 
 </body>
 

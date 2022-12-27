@@ -13,11 +13,20 @@
     /* La parte deslizante tendrá bordes redondeados */
 }
 
+.imgbanner {
+    overflow: hidden;
+    height: 250px;
+}
 
+a {
+    color: white;
+    font-size: larger;
+}
 
 body {
     background-color: black;
     color: white;
+    font-size: larger;
 }
 
 main {
@@ -28,12 +37,13 @@ main {
 }
 
 .banner {
-position: fixed;
-display: block;
-background-color: black;
-width: 100%;
-top: 0;
+    position: fixed;
+    display: block;
+    background-color: black;
+    width: 100%;
+    top: 0;
 }
+
 h1 {
     text-align: center;
 }
@@ -47,7 +57,7 @@ article {
 }
 
 article:first-of-type {
-    margin-top: 140px;
+    margin-top: 100px;
 }
 
 nav {
@@ -209,6 +219,10 @@ button:hover {
         top: 0;
     }
 
+    .imgbanner {
+        display: none;
+    }
+
 }
 
 .sticky-element {
@@ -217,4 +231,45 @@ button:hover {
     position: sticky;
     top: 0;
     /* El elemento se fijará en la parte superior del contenedor */
+}
+
+form {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input {
+    background-color: #666;
+    color: white;
+}
+
+#message {
+    max-width: 100%;
+    background-color: #666;
+    color: white;
 }
