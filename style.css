@@ -189,6 +189,11 @@ button:hover {
     main {
         width: 100%;
     }
+    
+    nav {
+        width: 100%;
+        font-size: smaller;
+    }
 
     aside {
         display: block;
