@@ -1,3 +1,16 @@
+window.addEventListener('load', () => {
+  const aside = document.querySelector('aside');
+  const menuButton = document.getElementById('menu-button');
+
+  // Oculta el elemento aside al cargar la página
+  aside.style.visibility = 'hidden';
+
+  // Añade los eventos de clic al botón y al documento
+  menuButton.addEventListener('click', toggleAside);
+  document.addEventListener('click', hideAside);
+});   
+
+
 window.addEventListener('resize', () => {
     const aside = document.querySelector('aside');
     const menuButton = document.getElementById('menu-button');
@@ -16,9 +29,10 @@ window.addEventListener('resize', () => {
       // Añade los eventos de clic al botón y al documento
       menuButton.addEventListener('click', toggleAside);
       document.addEventListener('click', hideAside);
+       
     }
   });
-  
+  /*
   // Función para mostrar o ocultar el elemento aside al hacer clic en el botón
   function toggleAside() {
     const aside = document.querySelector('aside');
@@ -32,5 +46,25 @@ window.addEventListener('resize', () => {
     if (event.target !== menuButton && event.target !== aside) {
       aside.style.visibility = 'hidden';
     }
+  } */
+  
+
+  // Función para mostrar el elemento aside al hacer clic en el botón
+function toggleAside() {
+  const aside = document.querySelector('aside');
+  aside.style.visibility = 'visible';
+}
+
+// Función para ocultar el elemento aside al hacer clic en cualquier lugar del documento excepto en el botón y el aside
+function hideAside(event) {
+  const aside = document.querySelector('aside');
+  const menuButton = document.getElementById('menu-button');
+  if (event.target !== menuButton && event.target !== aside) {
+    aside.style.visibility = 'hidden';
   }
+}
+
+
+
+
   
