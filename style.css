@@ -55,6 +55,7 @@ h2 {
 }
 
 article {
+    padding-top: 0;
     border: 1px solid #333;
     margin: 1em;
     padding: 1em;
@@ -160,6 +161,9 @@ button:hover {
     main {
         margin-right: 200px;
     }
+    aside {
+        display: block;
+    }
 
     aside ul {
         list-style-type: none;
@@ -188,10 +192,15 @@ button:hover {
 
 @media screen and (max-width: 600px) {
 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     main {
         width: 100%;
     }
-    
+
     nav {
         width: 100%;
         font-size: smaller;
@@ -283,4 +292,4 @@ input {
     max-width: 100%;
     background-color: #666;
     color: white;
-} 
+}
