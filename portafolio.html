@@ -45,8 +45,39 @@
             <p>El código también incluye una función copiarPortapapeles que utiliza el API de portapapeles de
                 JavaScript para copiar el texto encriptado o desencriptado al portapapeles del usuario.</p>
 
-                <a href="https://esfader.github.io/oracle-one-alura-challenge1/" target="_blank">Ir al Encriptador de Texto</a>
+            <a href="https://esfader.github.io/oracle-one-alura-challenge1/" target="_blank">Ir al Encriptador de
+                Texto</a>
 
+        </article>
+        <article>
+            <h2>Calculadora</h2>
+            <p>Este código define una calculadora que permite realizar operaciones matemáticas básicas, como sumar,
+                restar, multiplicar y dividir. También permite calcular la raíz cuadrada de un número y calcular una
+                potencia.</p>
+
+            <p>La función addNumber se encarga de añadir un número a la pantalla de la calculadora. Si la pantalla
+                muestra el valor "0", reemplaza ese valor por el número que se está añadiendo. Si la pantalla ya muestra
+                un número distinto de "0", simplemente concatena el nuevo número al final.</p>
+
+            <p>La función calculateResult se encarga de calcular el resultado de la operación matemática que se ha
+                estado construyendo. Primero, almacena el valor actual de la pantalla en una variable llamada
+                calculation, que luego se usará para evaluar la expresión matemática. Luego, asigna al valor de la
+                pantalla el resultado de evaluar calculation y muestra el resultado en un elemento de la página web con
+                la clase "result". Si el resultado es "NaN" (not a number) o "Infinity", significa que la operación es
+                inválida y se reinicia la calculadora. Finalmente, se ejecuta la función limpiarDisplay después de 3
+                segundos para borrar el resultado de la pantalla.</p>
+
+            <p>La función handleOperator se encarga de añadir el operador seleccionado a la operación matemática en
+                construcción. Dependiendo del operador seleccionado, se añade a calculation el valor actual de la
+                pantalla seguido del operador correspondiente. Luego, se reinicia la pantalla a "0".</p>
+
+            <p>Las funciones calculateSquareRoot y calculatePower se encargan de calcular, respectivamente, la raíz
+                cuadrada de un número y una potencia. Ambas funciones piden al usuario que ingrese el valor del
+                exponente en el caso de calculatePower. Luego, asignan el resultado de la operación a la pantalla.</p>
+
+            <p>Por último, la función limpiarDisplay se encarga de reiniciar la pantalla de la calculadora a "0".</p>
+
+            <a href="calculadora/calculadora.html" target="_blank">Ir a la calculadora</a>
         </article>
     </main>
 
