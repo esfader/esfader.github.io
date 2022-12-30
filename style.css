@@ -25,6 +25,7 @@ body {
     background-color: #97a0f5;
     color: #777;
     font-size: larger;
+    box-sizing: border-box;
 }
 
 main {
