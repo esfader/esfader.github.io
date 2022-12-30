@@ -1,0 +1,114 @@
+input[type="button"] {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 500px;
+    /* o el tamaño que desees */
+    height: 500px;
+    /* o el tamaño que desees */
+}
+
+main {
+    width: 500px;
+    /* o el tamaño que desees */
+    height: 500px;
+    /* o el tamaño que desees */
+    margin: auto;
+}
+
+
+/* Estilo general de la calculadora */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Estilo del elemento de texto que muestra el resultado */
+#display {
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#history {
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo de los botones de la calculadora */
+input[type="button"] {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Estilo de los botones de operación */
+input[type="button"][value="+"],
+input[type="button"][value="-"],
+input[type="button"][value="*"],
+input[type="button"][value="/"] {
+    background-color: #ddd;
+}
+
+/* Estilo del botón de igual */
+input[type="button"][value="="] {
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+/* Estilo del botón de reset */
+input[type="reset"] {
+    width: 100%;
+    background-color: #faa;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.calculator {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+input[type="button"] {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+}
